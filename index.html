@@ -28,7 +28,45 @@
         </div>
         <div class="navbar-right">
             <div class="online">
-                <img src="./images/user-1.png" alt="" class="nav-profile-img">
+                <img src="./images/user-1.png" alt="" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+        <!-- ------------  profile dropdown-menu  ------------ -->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="./images/user-1.png" alt="">
+                    <div>
+                        <h3>Larry Holmer</h3>
+                        <a href="/profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="./images/feedback.png" alt="">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./images/setting.png" alt="">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./images/help.png" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./images/display.png" alt="">
+                    <p>Display & Accsssibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./images/logout.png" alt="">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
             </div>
         </div>
     </nav>
@@ -56,7 +94,7 @@
                     <a href="#"><img src="./images/premium.png" alt="">Try Premium</a>
                 </div>
             </div>
-            <div class="sidebar-activity">
+            <div class="sidebar-activity" id="sidebarActivity">
                 <h3>RECENT</h3>
                 <a href="#"><img src="./images/recent.png" alt=""> Web Development</a>
                 <a href="#"><img src="./images/recent.png" alt=""> User Interface</a>
@@ -80,6 +118,8 @@
                     <a href="#">Discover more</a>
                 </div>
             </div>
+
+            <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
         </div>
         <!-- main content -->        
         <div class="main-content">
@@ -359,5 +399,25 @@
         </div>
     </div>
 
+    <script>
+        let profileMenu = document.querySelector('#profileMenu');
+
+        function toggleMenu() {
+            profileMenu.classList.toggle("open-menu");
+        }
+
+        let sidebarActivity = document.querySelector('#sidebarActivity');
+        let moreLink = document.querySelector('#showMoreLink');
+
+        function toggleActivity() {
+            sidebarActivity.classList.toggle("open-activity");
+
+            if(sidebarActivity.classList.contains("open-activity")) {
+                moreLink.innerHTML = "Show less <b>-</b>";
+            } else {
+                moreLink.innerHTML = "Show more <b>+</b>";
+            }
+        }
+    </script>
 </body>
 </html>
