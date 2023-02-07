@@ -1,0 +1,46 @@
+Arguments: 
+  /home/oseogbe/.nvm/versions/node/v16.18.0/bin/node /usr/bin/yarn install
+
+PATH: 
+  /home/oseogbe/.nvm/versions/node/v16.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/oseogbe/.composer/vendor/bin:/home/oseogbe/.config/composer/vendor/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 104.16.19.35:443 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1041:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at emitLookup (node:net:1187:9)
+      at /usr/lib/node_modules/yarn/lib/cli.js:103587:28
+      at /usr/lib/node_modules/yarn/lib/cli.js:103496:13
+      at RawTask.module.exports.RawTask.call (/usr/lib/node_modules/yarn/lib/cli.js:79584:19)
+      at flush (/usr/lib/node_modules/yarn/lib/cli.js:79666:29)
+      at processTicksAndRejections (node:internal/process/task_queues:78:11)
+
+npm manifest: 
+  {
+    "private": true,
+    "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+      "nuxt": "^3.1.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
